@@ -1,9 +1,4 @@
 #include "Motor.h"
-#include <pio_encoder.h>
-PioEncoder encoder_FL(12);
-PioEncoder encoder_BL(14);
-PioEncoder encoder_FR(16);
-PioEncoder encoder_BR(18);
 
 Motor::Motor(int ENpin, int IN1pin, int IN2pin, int encoder1pin, int encoder2pin)
 {
