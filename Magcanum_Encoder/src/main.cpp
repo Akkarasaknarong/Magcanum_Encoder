@@ -46,9 +46,9 @@ void loop()
   // int target = 250 * sin(prevT / 1e6);
 
   // PID constants
-  float kp = 100;
+  float kp = 20;
   float kd = 0.5;
-  float ki = 0.0;
+  float ki = 0.02;
 
   // time difference
   long currT = micros();
@@ -77,11 +77,10 @@ void loop()
   {
     output_speed = -255;
   }
-  else if (u > -50 || u < 50)
+  else if (u > -1 || u < 1)
   {
-    FL.stop();
+    output_speed = 0;
   }
-  
 
   FL.speed(output_speed);
 

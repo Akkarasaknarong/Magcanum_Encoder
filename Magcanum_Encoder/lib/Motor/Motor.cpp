@@ -24,6 +24,11 @@ void Motor::speed(int speed)
         digitalWrite(IN1, LOW);
         digitalWrite(IN2, HIGH);
     }
+    else if (speed == 0)
+    {
+        digitalWrite(IN1, HIGH);
+        digitalWrite(IN2, HIGH);
+    }
     analogWrite(EN, abs(speed));
 }
 
