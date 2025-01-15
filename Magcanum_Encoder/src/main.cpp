@@ -38,13 +38,19 @@ void setup()
 
 void loop()
 {
-  FL.compute_PID(255,10000);
+  // int target = 250 * sin(prevT / 1e6);
+  // long currT = micros();
+  // float deltaT = ((float)(currT - prevT)) / (1.0e6);
+  // prevT = currT;
+  // Serial.println(target);
+  // delay(100);
+  
+  FL.compute_PID(80, 1500);
   Serial.print("\t");
-  FR.compute_PID(255,10000);
+  FR.compute_PID(80, 1500);
   Serial.print("\t");
-  BL.compute_PID(255,10000);
+  BL.compute_PID(80, 1500);
   Serial.print("\t");
-  BR.compute_PID(255,10000);
+  BR.compute_PID(80, 1500);
   Serial.println();
-
 }

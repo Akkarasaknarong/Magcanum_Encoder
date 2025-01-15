@@ -35,7 +35,7 @@ void Motor::compute_PID(int _maxspeed, int _target_encoder)
 
     // set target position
     int target = _target_encoder;
-    // int target = 250 * sin(prevT / 1e6);
+    // int target = 5000 * sin(prevT / 1e6);
 
     // time difference
     long currT = micros();
